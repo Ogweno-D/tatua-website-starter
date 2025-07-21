@@ -1,103 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" aria-description="Streamline your support operations with Tatua's enterprise grade ticketing system. Join 500+ companiers delivering exceptional customer experiences">
-    <title>Tatua - Enterprise Ticketing Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"/>
+    <meta name="description"  content="Streamline your support operations with Tatua's enterprise grade ticketing system. Join 500+ companiers delivering exceptional customer experiences" />
+    <title>Tatua | Enterprise Ticketing Solutions</title>
+    <link rel="icon" type="image/png" href="assets/tatua-favicon.png" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body style="">
+<body>
     <header>
-        <div>
+        <div class="header-section">
             <div class="logo">
                 <img
                     src="assets/tatua-logo.png"
                     alt=" Tatua Logo"
+                    class="company-logo"
                  >
             </div>
-
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="nav-links">
+                    <li>
+                        <a class="nav-item" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="case-studies.html">Case Studies</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
 
+            <!--Mobile menu button -->
+            <div class="menu-btn">
+                <i class="fa fa-bars"> </i>
+            </div>
+
         </div>
     </header>
-
     <main id="main" >
-        <section id="hero">
+        <section class="hero-section">
             <div>
-                <h1> Streamline Your Support Operations</h1>
-                <h2> Enterprise-grade ticketing system that scales with your business</h2>
-                <p> Join 500+ companies using Tatua to manage the customer support, track issues, and deliver exceptional service experience </p>
+                <h1 class="hero-title"> Streamline Your Support Operations</h1>
+                <h2 class="hero-subtitle"> Enterprise-grade ticketing system that scales with your business</h2>
+                <p class="hero-caption"> Join 500+ companies using Tatua to manage the customer support, track issues, and deliver exceptional service experience </p>
 
-                <div>
-                    <a href="#">Start Free Trial</a>
-                    <a href="#">Schedule Demo</a>
+                <div class="hero-buttons">
+                    <a  class="btn" href="#">Start Free Trial</a>
+                    <a  class="btn" href="#">Schedule Demo</a>
                 </div>
             </div>
         </section>
 
-        <section id="services">
-            <div>
-                <h2>Why choose Tatua?</h2>
-
+        <section class="services-container">
+                <h2 class="services-title"> Why Choose Tatua? </h2>
                 <!--  List of Services    -->
-                <div>
-                    <ul>
-                        <li>
-                            <h3>Lightning Fast Resolution</h3>
-                            <span>
-                           Average ticket resolution time is reduced by 60%
-                       </span>
-                        </li>
-                        <li>
-                            <h3>Enterprise Security</h3>
-                            <span>
-                           SOC 2 compliant with end-to-end encryption
-                       </span>
-                        </li>
-                        <li>
-                            <h3>Seamless  Integration</h3>
-                            <span>
-                           Connects with Slack, Teams, and 200+ business tools
-                       </span>
-                        </li>
-
-                    </ul>
+                <div class="services-cards">
+                    <div class="service-card">
+                        <h3 class="label">Lightning Fast Resolution</h3>
+                        <p class="value">
+                             Average ticket resolution time is reduced by 60%
+                         </p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="label">Enterprise Security</h3>
+                        <p class="value">
+                             SOC 2 compliant with end-to-end encryption
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="label">Seamless  Integration</h3>
+                        <p class="value">
+                             Connects with Slack, Teams, and 200+ business tools
+                        </p>
+                    </div>
                 </div>
-            </div>
         </section>
 
-        <section id="stats">
-            <div>
-                <ul>
-                    <li> 500+ satisfied customers </li>
-                    <li> 2M+ tickets processed</li>
-                    <li> 60% faster resolution</li>
-                    <li> 99.9% uptime guarantee</li>
-                </ul>
+        <section class="stats">
+            <div class="stats-card">
+                <span class="stat"> 500+ satisfied customers </span>
+                <span class="stat">  2M+ tickets processed</span>
+                <span class="stat"> 60% faster resolution</span>
+                <span class="stat"> 99.9% uptime guarantee</span>
             </div>
         </section>
 
     </main>
-
-
-
-    <footer  aria-labelledby="Footer">
+    <footer  class="footer">
         <div>
             <div>
-                @2025 Tatua Solutions Inc.
+                <div>
+                    <p> Email: hello@tatua.com</p>
+                    <p> Phone: +1 (555) 123-4567 </p>
+                    <p> Address: 123 Innovation Drive, Suite 400, San Fransisco, CA 94105 </p>
+                </div>
             </div>
             <div>
-                <ul>
-                    <li> Email: hello@tatua.com</li>
-                    <li> Phone: +1 (555) 123-4567 </li>
-                    <li> Address: 123 Innovation Drive, Suite 400, San Fransisco, CA 94105 </li>
-                </ul>
+                <p>  @2025 Tatua Solutions Inc. </p>
             </div>
         </div>
     </footer>

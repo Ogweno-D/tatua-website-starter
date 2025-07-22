@@ -4,39 +4,62 @@
     <meta charset="UTF-8">
     <meta name="description" content="See how companies like TechFlow and HealthCare Partners transformed their support operations with Tatua's ticketing system.">
     <title>Case Studies - Tatua Success Stories</title>
+    <link rel="icon" type="image/png" href="assets/tatua-favicon.png" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <div class="logo">
-        <img
-                src="assets/tatua-logo.png"
-                alt=" Tatua Logo"
-        >
-    </div>
+    <div class="header-section">
+        <div class="logo">
+            <img
+                    src="assets/tatua-logo.png"
+                    alt=" Tatua Logo"
+                    class="company-logo"
+            >
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="case-studies.html">Case Studies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="case-studies.html">Case Studies</a>
+        <!--Mobile menu button -->
+        <div class="menu-btn">
+            <i class="fa fa-bars"> </i>
+        </div>
     </div>
-
-    <div class="page-header">
-        <h1>Customer Success Stories</h1>
-        <h2> Results from real companies</h2>
-        <p>
-            Discover how businesses across industries have transformed their support operations with Tatua's.
-            From startups to enterprise organizations, see the measurable impact of implementing our ticketing system.
-        </p>
+    <div class="nav-breadcrumb">
+        <nav>
+            <a class="breadcrumb-item" href="index.html">Home</a>
+            <span class="breadcrumb-separator">&rsaquo;</span>
+            <a class="breadcrumb-item active" href="case-studies.html">Case Studies</a>
+        </nav>
     </div>
 </header>
+
 <main>
+    <section class="hero-section">
+        <div class="">
+            <h1 class="hero-title">Customer Success Stories</h1>
+            <h2 class="hero-subtitle"> Results from real companies</h2>
+            <p class="hero-caption">
+                Discover how businesses across industries have transformed their support operations with Tatua's.
+                From startups to enterprise organizations, see the measurable impact of implementing our ticketing system.
+            </p>
+        </div>
+    </section>
+
     <section class="case-studies">
         <h2>Case Studies</h2>
         <article class="case-study">
@@ -426,17 +449,17 @@
 
     </section>
 </main>
-<footer>
+<footer  class="footer">
     <div>
         <div>
-            @2025 Tatua Solutions Inc.
+            <div class="footer-address">
+                <p> Email: hello@tatua.com</p>
+                <p> Phone: +1 (555) 123-4567 </p>
+                <p> Address: 123 Innovation Drive, Suite 400, San Fransisco, CA 94105 </p>
+            </div>
         </div>
-        <div>
-            <address>
-                <a href="mailto:hello@tatua.com"> Email: hello@tatua.com </a>
-                <a href="tel:+1 (555) 123-4567"> Phone: +1 (555) 123-4567 </a>
-                 Address: 123 Innovation Drive, Suite 400, San Fransisco, CA 94105
-            </address>
+        <div class="footer-label">
+            <p>  @2025 Tatua Solutions Inc. </p>
         </div>
     </div>
 </footer>

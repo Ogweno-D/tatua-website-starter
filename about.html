@@ -4,30 +4,47 @@
     <meta charset="utf-8" />
     <meta name="description" content=" Learn about Tatua's mission to eliminate support chaos and meet our team of enterprise support experts">
     <title>About US- Tatua Solutions</title>
+    <link rel="icon" type="image/png" href="assets/tatua-favicon.png" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <div class="logo">
-        <img
-                src="assets/tatua-logo.png"
-                alt=" Tatua Logo"
-        >
+    <div class="header-section">
+        <div class="logo">
+            <img
+                    src="assets/tatua-logo.png"
+                    alt=" Tatua Logo"
+                    class="company-logo"
+            >
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="case-studies.html">Case Studies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Mobile menu button -->
+        <div class="menu-btn">
+            <i class="fa fa-bars"> </i>
+        </div>
     </div>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <div>
-
-        <ul id="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+    <div class="nav-breadcrumb">
+        <nav>
+            <a class="breadcrumb-item" href="index.html">Home</a>
+            <span class="breadcrumb-separator">&rsaquo;</span>
+            <a class="breadcrumb-item active" href="about.html">About</a>
+        </nav>
     </div>
 </header>
 <main>
@@ -132,8 +149,19 @@
     </section>
 
 </main>
-<footer>
-
+<footer  class="footer">
+    <div>
+        <div>
+            <div class="footer-address">
+                <p> Email: hello@tatua.com</p>
+                <p> Phone: +1 (555) 123-4567 </p>
+                <p> Address: 123 Innovation Drive, Suite 400, San Fransisco, CA 94105 </p>
+            </div>
+        </div>
+        <div class="footer-label">
+            <p>  @2025 Tatua Solutions Inc. </p>
+        </div>
+    </div>
 </footer>
 </body>
 </html>

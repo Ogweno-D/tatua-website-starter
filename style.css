@@ -1,3 +1,28 @@
+:root {
+    /*Primary */
+        --primary-0: hsl(43,100%, 93%, 100%);
+        --primary-1: hsl(41,100%, 84%, 100%);
+        --primary-2: hsl(40,98%, 75%, 100%);
+        --primary-3: hsl(40,97%, 65%, 100%);
+        --primary-4: hsl(40,97%, 55%, 100%);
+        --primary-5: hsl(40, 97%, 45%, 100%);
+        --primary-6: hsl(40,100%, 34%, 100%);
+        --primary-7: hsl(40,100%, 25%, 100%);
+        --primary-8: hsl(40,100%, 15%, 100%);
+        --primary-9: hsl(33,100%, 6%, 100%);
+
+    /* Secondary */
+        --secondary-0: hsl(268,100%, 96%, 100%);
+        --secondary-1: hsl(265,40%, 86%, 100%);
+        --secondary-2: hsl(266,33%, 75%, 100%);
+        --secondary-3: hsl(264,32%, 65%, 100%);
+        --secondary-4: hsl(265,31%, 55%, 100%);
+        --secondary-5: hsl(265,31%, 45%, 100%);
+        --secondary-6: hsl(265,32%, 35%, 100%);
+        --secondary-7: hsl(263,32%, 25%, 100%);
+        --secondary-8: hsl(266,36%, 15%, 100%);
+        --secondary-9: hsl(265,55%, 6%, 100%);
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +31,7 @@
 
 html,body{
     height: 100%;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Lexend Deca', serif;
     background-color: #f5f5f5;
     padding: 0;
     line-height: 1.4;
@@ -21,6 +46,17 @@ html,body{
 .company-logo{
 
 }
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+    z-index: 1000;
+}
 
 .nav-links{
     display: flex;
@@ -33,7 +69,7 @@ html,body{
 .nav-link{
     display: inline-block;
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.5em;
     margin: 10px;
     text-decoration: none;
     vertical-align: top;
@@ -57,7 +93,7 @@ a {
 }
 
 .nav-breadcrumb{
-    padding: 5px 10px;
+    padding: 0.2em 1em;
     margin: 0 20px;
     color: #555;
     max-width: 1000px;
@@ -71,7 +107,7 @@ a {
 .breadcrumb-item{
     text-decoration: none;
     color: #5a4dad;
-    padding: 10px;
+    padding: 0.5em;
     transition: color 1s;
 }
 .breadcrumb-item:hover{
@@ -84,20 +120,41 @@ a {
     color: #bbb;
 }
 h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.2;
 }
 h2{
-    font-size: 2rem;
+    font-size: 2.0rem;
+    line-height: 1.2;
+}
+h3{
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+h4{
+    font-size: 1.2rem;
     line-height: 1.2;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.5;
+}
+li{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-decoration: none;
+    list-style: none;
+}
+span{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+#main{
+    margin-top: 60px;
 }
 
 .hero-section {
-    height: 70vh;
+    height: 75vh;
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -107,7 +164,7 @@ p{
     margin: 0 auto;
     line-height: 1.6;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 1em;
 }
 .hero-title{
     padding: 5px 10px;
@@ -116,7 +173,7 @@ p{
     font-size: 4vw;
 }
 .hero-subtitle{
-    padding: 10px 10px;
+    padding: 0.5em 2em;
     text-align: center;
     font-size: 2vw;
     margin-bottom: 1.5rem;
@@ -126,7 +183,7 @@ p{
     text-align: center;
     font-size: 1.5rem;
     margin-bottom:1.2rem;
-    padding: 10px 34px;
+    padding:0.5em 2.5em;
 }
 
 .hero-buttons{
@@ -140,23 +197,25 @@ p{
     margin-top: 1.5rem;
     border-radius: 5px;
     outline: none;
-    padding: 10px 20px;
+    padding: 0.5em 1em;
     color: white;
     background-color: #423275;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 1rem;
     text-decoration: none;
     vertical-align: top;
 }
 .btn:hover{
  /*  Add the lift effect from the notes*/
     background-color: #9d94d1;
+    position: relative;
+    transition: top .2s ease;
 }
 
 .services-container {
-    margin: 40px;
+    margin: 3rem auto;
     min-height: 50vh;
-    padding: 40px;
+    padding: 3em;
 }
 
 /* Work on the font title*/
@@ -173,15 +232,18 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-
+    gap: 2rem;
 }
 .service-card{
-    margin: 1.5rem auto;
+    min-height: 150px;
+    margin: 2rem auto;
     padding: 1rem;
     display: inline-block;
-    width: calc(33.333% - 20px);
+    box-sizing: border-box;
     vertical-align: top;
-    /*box-shadow: 10px 10px 20px #6f619f;*/
+    border: 1px solid white;
+    background-color:#fff;
+    border-radius: 1rem;
     box-shadow: 2px 5px 5px #6f619f;
 }
 .service-card:hover{
@@ -199,17 +261,15 @@ p{
     padding:0.5rem 1rem;
     font-size: 1.5rem;
 }
-
-
 .stats{
     width: 100%;
-    font-size: 1.5vw;
     text-align: center;
     margin: 1rem auto;
     background-color: #f1ce7a;
-    height: 18vh;
-    min-height: 70px;
-    padding: 20px 30px;
+    height: 30vh;
+    padding: 1.2em 1.5em;
+    display: flex;
+    flex-direction: row;
 }
 .stats-card{
     display: flex;
@@ -218,45 +278,377 @@ p{
     flex-direction: row;
     width: 100%;
     text-align: center;
-
+}
+.stats-card:hover{
+    transition: 1s ease-in-out;
 }
 .stat{
-    width: 100%;
-    font-size: 1.5vw;
-    text-align: center;
+    padding: 0.2em 1.5em;
     margin: 1rem auto;
-    padding: 20px;
 }
 
 .footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     width: 100%;
-    height: 30vh;
     text-align: center;
+    flex-direction: column;
     background-color: rgba(230, 230, 236, 0.29);
-    padding: 20px;
+    padding: 2em;
 }
 
 .footer-label{
     display: inline-block;
     color: rgba(57, 55, 55, 0.6);
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-top: 1.5em;
+    margin-top: 1.5rem;
     text-align: center;
 }
 .footer-address{
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
-@media(max-width: 800px){
+.footer-address p{
+    margin: 0.2rem auto;
+    padding: 0.2em;
+
+}
+/* Back to the top button */
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s,visibility 0.3s ease;
+}
+
+/* Case Studies */
+
+.case-studies-container{
+    padding: 1em;
+    margin: 1rem auto;
+    list-style: none;
+    text-align: center;
+    /*height: 100vh;*/
+}
+.case-studies{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em auto;
+}
+.case-study{
+    width: 100%;
+    max-width: 800px ;
+    margin:2em auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 2px 5px 10px #6f619f;
+    overflow: hidden;
+    padding: 2em;
+}
+.case-study:hover{
+    box-shadow: 10px 10px 10px 10px #6f619f;
+    transition: .3s ease;
+}
+
+.company-info{
+    margin: 1rem auto;
+    padding: 1em;
+    width: 500px;
+    align-items: center;
+    color: #313135;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 2px 5px 10px #6f619f;
+    overflow: hidden;
+}
+.info-item{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0.5em;
+}
+.info-item:last-child{
+    border-bottom: none;
+}
+.company-info .label{
+    text-align: left;
+    width: 200px;
+}
+.company-info .value{
+    flex: 1 ;
+    text-align: right;
+}
+
+.company-details{
+    margin: 0.5em auto;
+    padding: 1em
+}
+
+.company-challenge{
+    padding: 1em;
+}
+.company-solution{
+    padding: 1em;
+}
+.company-results{
+    padding: 1em;
+}
+.company-result{
+    display: inline-block;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*flex-wrap: wrap;*/
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0.5em;
+}
+.company-result:last-child{
+    border-bottom: none;
+}
+.company-result .label{
+    margin: 0 0.5rem;
+}
+.testimonials{
+    padding: 1em;
+}
+table{
+    border: 1px solid red;
+    width: 80%;
+    border-collapse: collapse;
+    margin: 5px auto;
+    padding: 5px;
+}
+
+/* ROI Calculator*/
+.roi-calculator{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 300px;
+}
+.roi-calculator h3{
+    margin: 1em auto;
+    padding: 1em;
+}
+.roi-calculator-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em auto;
+    padding: 1em;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 2px 5px 10px #6f619f;
+}
+.roi-calculator-card:hover{
+    box-shadow: 10px 10px 10px #6f619f;
+    transition: .3s ease;
+}
+.roi-metrics{
+    padding: 1em;
+}
+.roi-metrics h4{
+    margin: 0;
+}
+.roi-metric{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(230, 230, 236, 0.29);
+    padding: 0.2em
+}
+
+/* Case Study Customer Testimonials*/
+.customer-testimonials-container{
+    padding: 1em;
+}
+.testimonials-title{
+    padding: 1em;
+    text-align: center;
+}
+.testimonials-card{
+    width: calc(33% - 100px);
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 2em;
+    margin: 1.5rem 3rem;
+}
+.testimonials-content{
+    padding: 0.5em;
+    text-align: center;
+}
+.testimonial-name{
+    padding: 0.2em;
+    margin: 0.5rem 2rem;
+    text-align: center;
+    color: #6f619f;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+/* ABOUT PAGE*/
+.about-us-container{
+    height: 70vh;
+    padding: 1em;
+    text-align: center;
+    margin: 0.5em auto;
+}
+.company-story{
+    padding: 1em;
+    text-align: center;
+}
+.about-us-text p{
+    width: 80%;
+    margin: 0.2rem auto;
+    padding: 0.2em;
+    text-align: center;
+    font-size: 1.5rem
+}
+.about-us-container h2 {
+    margin: 1rem auto;
+    padding: 1em;
+}
+
+/*Team*/
+
+.team{
+    padding: 1em;
+    text-align: center;
+}
+.team-members{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+}
+.team-member-card{
+    margin: 2rem auto;
+    padding: 0.8em;
+    width: 600px;
+    color: #313135;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 2px 5px 10px #6f619f;
+    overflow: hidden;
+}
+.team-member-card:hover{
+    box-shadow: 10px 10px 10px #6f619f;
+    transition: .2s ease-in-out;
+}
+.team-member-card-item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0.5em;
+}
+.team-member-card-item:last-child{
+    border-bottom: none;
+}
+.team-member-card-item .label{
+    text-align: left;
+}
+.team-member-card-item .value{
+    flex: 1 ;
+    text-align: end;
+}
+
+.company-values{
+    margin: 3rem auto;
+    padding: 1em;
+    text-align: center;
+}
+.value-item{
+   margin: 1rem auto;
+    padding: 1em;
+}
+.value-item h2{
+    margin: 2rem auto;
+    padding: 1em;
+}
+.value-item p {
+    margin: 0.2em auto;
+}
+
+.company-stats h2{
+    margin: 0.5em auto;
+    padding: 0.2em;
+    text-align: center;
+}
+
+
+/*Media Queries for Responsiveness on small screens*/
+@media(max-width: 768px){
     .nav-item{
         display: none;
     }
     .menu-btn{
         display:inline-block;
     }
+    .services-container{
+        padding: 1.5rem;
+
+    }
+    .services-cards{
+        text-align: center;
+    }
+    .service-card{
+       width: 100%;
+    }
+    .stats {
+        text-align: center;
+        padding: 1em;
+        display: inline-block;
+    }
+
+    .stats-card{
+        margin: 1em auto;
+        width:200px;
+        text-align: center;
+        display: inline-block;
+
+
+    }
+    .team-members{
+        display: block;
+        padding: 1em;
+    }
+    .team-member-card{
+        width: 100%;
+        text-align: center;
+    }
+    /* Case Studies*/
+    .company-result{
+        padding: 1em;
+    }
+    .footer{
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        display:inline-block;
+    }
+
 }
+
+/*@media(max-width: 480px){*/
+/*    .navbar{*/
+/*        display: none;*/
+/*    }*/
+/*    .services-container{*/
+/*        font-size: 1.25rem;*/
+/*    }*/
+/*    .service-card{*/
+/*        flex: 1 1 100%;*/
+/*    }*/
+/*}*/

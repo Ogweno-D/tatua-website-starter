@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support operations">
@@ -62,7 +62,7 @@
     <!-- Contact information-->
     <section class="contact-information">
         <div class="company-details-container">
-            <h3> Company Details</h3>
+            <h2> Company Details </h2>
             <div class="company-details">
                 <span> <strong>Tatua Solutions Inc.</strong> </span>
                 <span>123 Innovation Drive, Suite 400 </span>
@@ -112,14 +112,24 @@
             </p>
         </div>
     </section>
-
-    <section class="contact-aside-section">
         <!-- Contact Form-->
-        <section class="contact-form">
-            <div class="contact-form-container">
+    <section class="contact-form">
+        <div class="contact-form-container">
                 <h2>Contact Form</h2>
                 <form METHOD="post" action="#" class="form-container">
-                    <fieldset class="contact-info">
+                    <div class="progress-bar">
+                        <div class="progress-step active">
+                            Step 1
+                        </div>
+                        <div class="progress-step">
+                            Step 2
+                        </div>
+                        <div class="progress-step">
+                            Step 3
+                        </div>
+
+                    </div>
+                    <fieldset class=" form-step active ">
                         <legend>Contact Information</legend>
                         <div class="form-group">
                             <label for="name">Full Name</label>
@@ -137,8 +147,12 @@
                             <label for="phone-number">Phone Number</label>
                             <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
                         </div>
+                        <div class="form-buttons">
+                            <span></span>
+                            <button type="button" class="btn next-btn ">Next</button>
+                        </div>
                     </fieldset>
-                    <fieldset class="customer-need">
+                    <fieldset class=" form-step customer-need">
                         <legend>Tell us about your need</legend>
                         <div class="form-group">
                             <label for="inquiry-type">Inquiry Type</label>
@@ -201,9 +215,13 @@
                             <label for="message">Message</label>
                             <textarea name="message" id="message" cols="30" rows="5" minlength="10" maxlength="500" required placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution.."></textarea>
                         </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn prev-btn">Previous</button>
+                            <button type="button" class="btn next-btn">Next</button>
+                        </div>
                     </fieldset>
                     <!-- Communication Preferences-->
-                    <fieldset class="communication-preference">
+                    <fieldset class=" form-step communication-preference">
                         <legend>Communication Preferences</legend>
                         <div class="form-group">
                             <label> Preferred Contact Method (required)</label>
@@ -219,102 +237,106 @@
                         </div>
 
                         <div class="form-group">
-                            <label> Newsletter Subscription</label>
-                            <input class="custom-checkbox" type="checkbox" id="newsletter-subscription" value="newsletter-subscription" > <label for="newsletter-subscription">Yes, I'd like to recieve product updates and industry insights</label>
+<!--                            <label> Newsletter Subscription</label>-->
+                            <input class="custom-checkbox" type="checkbox" id="newsletter-subscription" value="newsletter-subscription" > <label for="newsletter-subscription">Yes, I'd like to receive product updates and industry insights</label>
                         </div>
                         <div class="form-group">
-                            <label> Terms Agreement (required)</label>
-                            <input  class="custom-checkbox" type="checkbox" id="terms-agreement" value="terms-agreement" required> <label for="terms-agreement"> I agree to the Terms of Service and Privacy Policy</label>
+                            <label>
+                                <input  class="custom-checkbox" type="checkbox" id="terms-agreement" value="terms-agreement" required> <label for="terms-agreement"> I agree to the Terms of Service and Privacy Policy</label>
+                            </label>
                         </div>
+
                     </fieldset>
                     <div class="form-buttons" >
-                        <input type="submit" value="Send Message">
-                        <input type="reset" value="Clear Form">
+                        <div class="form-buttons">
+                            <button type="button" class="btn prev-btn">Previous</button>
+                        <input class="btn" type="submit" value="Send Message">
+                        <input  class="btn" type="reset" value="Clear Form">
+                    </div>
                     </div>
                 </form>
             </div>
+    </section>
+    <section class="locations-action-container">
+        <div >
+        <!-- Office Locations Section -->
+        <section class="office-locations-section">
+            <h3> Visit Our Offices</h3>
 
-        </section>
-        <div class="aside-container">
-            <!-- Office Locations Section -->
-            <section class="office-locations-section">
-                <h3> Visit Our Offices</h3>
-
-                <div class="office-locations">
-                    <div class="location">
-                        <h4> Primary Office</h4>
-                        <div>
+            <div class="office-locations">
+                <div class="location">
+                    <h4> Primary Office</h4>
+                    <div>
                             <span class="">
                                 <strong> San Francisco Headquarters </strong>
                             </span>
-                            <p>
-                                123 Innovation Drive, Suite 400
-                            </p>
-                            <p>
-                                San Francisco, CA 94105
-                            </p>
-                            <p>
-                                Phone : 1 (555) 123-4567
-                            </p>
-                        </div>
+                        <p>
+                            123 Innovation Drive, Suite 400
+                        </p>
+                        <p>
+                            San Francisco, CA 94105
+                        </p>
+                        <p>
+                            Phone : 1 (555) 123-4567
+                        </p>
                     </div>
-                    <div class="location">
-                        <h4> Satellite Office</h4>
-                        <div>
+                </div>
+                <div class="location">
+                    <h4> Satellite Office</h4>
+                    <div>
                             <span class="">
                                     <strong>
                                     New York Office
                                     </strong>
                             </span>
 
-                            <p>
-                                456 Business Plaza, Floor 12
-                            </p>
-                            <p>
-                                New York, NY 10001
-                            </p>
-                            <p>
-                                Phone: +1 (555) 123-4570
-                            </p>
+                        <p>
+                            456 Business Plaza, Floor 12
+                        </p>
+                        <p>
+                            New York, NY 10001
+                        </p>
+                        <p>
+                            Phone: +1 (555) 123-4570
+                        </p>
 
-                        </div>
                     </div>
                 </div>
+            </div>
 
 
 
-            </section>
-            <!-- Quick Actions section -->
-            <section class="quick-actions">
-                <div class="quick-actions-container">
-                    <h3> Quick Actions</h3>
-                    <div class="quick-actions">
-                        <div class="quick-action">
-                            <a href="#"> Start Free Trial</a>
-                            <p>
-                                Get up and running in minutes with our 14-day free trial.
-                            </p>
-                        </div>
-                        <div class="quick-action">
-                            <a href="#"> Schedule Demo</a>
-                            <p>
-                                See Tatua in action with a personalized 30-minute demo.
-                            </p>
-                        </div>
-                        <div class="quick-action">
-                            <a href="#"> Download Resources</a>
-                            <p>
-                                Access our implementation guide and best practices documentation.
-                            </p>
-                        </div>
-
+        </section>
+        <!-- Quick Actions section -->
+        <section class="quick-actions">
+            <div class="quick-actions-container">
+                <h3> Quick Actions</h3>
+                <div class="quick-actions">
+                    <div class="quick-action">
+                        <a href="#"> Start Free Trial</a>
+                        <p>
+                            Get up and running in minutes with our 14-day free trial.
+                        </p>
+                    </div>
+                    <div class="quick-action">
+                        <a href="#"> Schedule Demo</a>
+                        <p>
+                            See Tatua in action with a personalized 30-minute demo.
+                        </p>
+                    </div>
+                    <div class="quick-action">
+                        <a href="#"> Download Resources</a>
+                        <p>
+                            Access our implementation guide and best practices documentation.
+                        </p>
                     </div>
 
                 </div>
 
-            </section>
-        </div>
+            </div>
 
+        </section>
+    </div>
     </section>
 
 </main>
@@ -332,5 +354,55 @@
         </div>
     </div>
 </footer>
+
+<script>
+    const form = document.getElementById("multi-step-form");
+    const steps = Array.from(document.querySelectorAll(".form-step"));
+    const progressSteps = Array.from(document.querySelectorAll(".progress-step"));
+    const nextBtns = document.querySelectorAll(".next-btn");
+    const prevBtns = document.querySelectorAll(".prev-btn");
+
+    let currentStep = 0;
+
+    function showStep(index) {
+        steps.forEach((step, i) => {
+            step.classList.toggle("active", i === index);
+            progressSteps[i].classList.toggle("active", i === index);
+        });
+    }
+
+    function validateStep(stepEl) {
+        const inputs = stepEl.querySelectorAll("input, select, textarea");
+        for (let input of inputs) {
+            if (!input.checkValidity()) {
+                input.reportValidity();
+                return false;
+            }
+        }
+        return true;
+    }
+
+    nextBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            if (validateStep(steps[currentStep])) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+    });
+
+    prevBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            currentStep--;
+            showStep(currentStep);
+        });
+    });
+
+    form.addEventListener("submit", (e) => {
+        if (!validateStep(steps[currentStep])) {
+            e.preventDefault();
+        }
+    });
+</script>
 </body>
 </html>

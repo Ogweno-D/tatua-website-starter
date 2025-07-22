@@ -267,7 +267,7 @@ span{
     text-align: center;
     margin: 1rem auto;
     background-color:var(--secondary-4);
-    height: 30vh;
+    min-height: 30vh;
     padding: 1.2em 1.5em;
     display: flex;
     flex-direction: row;
@@ -286,6 +286,7 @@ span{
 .stat{
     padding: 0.2em 1.5em;
     margin: 1rem auto;
+    font-size: 1.5rem;
 }
 
 .footer{
@@ -417,14 +418,60 @@ span{
 .testimonials{
     padding: 1em;
 }
-table{
-    border: 1px solid red;
-    width: 80%;
+/* Reset and foundation */
+table {
     border-collapse: collapse;
-    margin: 5px auto;
-    padding: 5px;
+    width: 100%;
+    margin: 2rem 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
+caption {
+    padding: 0.5em;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    background-color: var(--primary-1);
+    border-bottom: 1px solid var(--primary-0);
+}
+
+th, td {
+    padding: 0.75em 1em;
+    text-align: left;
+    border-bottom: 1px solid var(--primary-1);
+    vertical-align: middle;
+}
+
+th {
+    background-color: hsl(265,40%, 86%, 50%);
+    font-weight: 600;
+    color: var(--primary-7);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tbody tr:hover {
+    background-color: var(--primary-0);
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+.performance-metric-table{
+    margin: 1rem 4rem;
+}
+.feature-comparison-table{
+    margin: 1rem 4rem;
+}
+.industry-metrics-table{
+    margin: 1rem 4rem;
+}
 /* ROI Calculator*/
 .roi-calculator{
     padding: 1em;
@@ -481,7 +528,6 @@ table{
 .testimonials-card{
     width: calc(33% - 100px);
     display: inline-block;
-    box-sizing: border-box;
     padding: 2em;
     margin: 1.5rem 3rem;
 }
@@ -501,7 +547,6 @@ table{
 
 /* ABOUT PAGE*/
 .about-us-container{
-    height: 70vh;
     padding: 1em;
     text-align: center;
     margin: 0.5em auto;
@@ -526,10 +571,13 @@ table{
 .team{
     padding: 1em;
     text-align: center;
+
 }
 .team-members{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 2.5rem;
     padding: 1em;
 }
 .team-member-card{
@@ -585,6 +633,7 @@ table{
     text-align: center;
 }
 
+
 /* CONTACT PAGE */
 .company-details-container{
     padding: 1em;
@@ -602,6 +651,10 @@ table{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.company-details h2{
+    margin: 1.5rem auto;
+    color: var(--primary-8);
 }
 .contact-information{
     margin: 0 auto;
@@ -687,26 +740,26 @@ table{
     padding: 0.5em;
     color: var(--primary-5);
 }
-.contact-aside-section {
-    display: flex;
-    gap: 2rem;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    padding: 1em;
-}
 
-.contact-form {
-    flex: 2;
-    min-width: 300px;
-    padding: 1em;
-}
-.aside-container {
-    flex: 1;
-    min-width: 200px;
-    padding: 1em;
-}
+/*.contact-aside-section {*/
+/*    display: flex;*/
+/*    gap: 2rem;*/
+/*    margin: 0 auto;*/
+/*    flex-wrap: wrap;*/
+/*    padding: 1em;*/
+/*}*/
+
+
+/*.aside-container {*/
+/*    flex: 1;*/
+/*    min-width: 200px;*/
+/*    padding: 1em;*/
+/*}*/
 
 /*!* FORM STYLING *!*/
+.contact-form {
+    min-width: 300px;
+}
 .contact-form-container{
     display: flex;
     flex-direction: column;
@@ -745,6 +798,7 @@ input[type="tel"],
 input[type="url"],
 select,
 textarea {
+    resize: vertical;
     width: 100%;
     padding: 1rem 2rem;
     border: 1px solid grey;
@@ -811,6 +865,9 @@ fieldset{
     padding: 1em;
     margin: 1.5rem auto;
 }
+fieldset .active{
+    display: block;
+}
 fieldset legend{
     font-weight: 600;
     font-size: 1.2rem;
@@ -835,15 +892,76 @@ input:required:valid {
 input:required:invalid:not(:placeholder-shown) {
     border-left-color: var(--primary-5);
 }
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+    min-width: 120px;
+}
+.btn-primary {
+    background-color: var(--primary-4);
+    color: white;
+    border-color: var(--primary-6);
+}
+.btn-primary:hover {
+    background-color: var(--primary-5);
+    border-color: var(--primary-6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--primary-4);
+}
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Progress indicator*/
+.progress-bar {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.progress-step {
+    flex: 1;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--primary-1);
+    color: white;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.progress-step.active {
+    background-color: var(--primary-5);
+}
+.locations-action-container{
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    width: 100%;
+}
 .office-locations-section{
-    background-color: white;
+    /*background-color: white;*/
     text-align: justify;
     width: 100%;
     align-content: center;
     margin: 0.5rem auto;
     padding: 1em;
     border-radius: 4px;
-    box-shadow: 1px 4px 5px var(--primary-3);
+    /*box-shadow: 1px 4px 5px var(--primary-3);*/
 
 }
 .office-locations-section h3,h4{
@@ -861,13 +979,12 @@ input:required:invalid:not(:placeholder-shown) {
     text-align: center;
 }
 .quick-actions-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: white;
-    padding: 1em;
-    margin: 0.5em auto;
-    box-shadow: 1px 4px 5px var(--primary-3);
+    padding: 2em;
+    margin: 2em auto;
+    border-radius: 4px;
+}
+.quick-actions-container h3{
+    text-align: center;
 }
 .quick-action{
     text-align: center;
@@ -881,13 +998,21 @@ input:required:invalid:not(:placeholder-shown) {
     text-decoration: underline;
     color: var(--primary-6);
 }
+
+
 /*Media Queries for Responsiveness on small screens*/
 @media(max-width: 768px){
-    .nav-item{
+    .hero-section{
+        height: auto;
+    }
+    .nav-links{
         display: none;
     }
     .menu-btn{
         display:inline-block;
+    }
+    .nav-breadcrumb{
+        display: none;
     }
     .services-container{
         padding: 1.5rem;
@@ -901,15 +1026,21 @@ input:required:invalid:not(:placeholder-shown) {
     }
     .stats {
         text-align: center;
-        padding: 1em;
+        padding: 0.5em;
         display: inline-block;
     }
-
     .stats-card{
-        margin: 1em auto;
-        width:100%;
         text-align: center;
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 200px;
+    }
+    .contact-details {
+        margin: 1em auto;
+        display: grid;
     }
     .team-members{
        display: grid;
@@ -936,6 +1067,27 @@ input:required:invalid:not(:placeholder-shown) {
         text-align: center;
         width: 100%;
         display:inline-block;
+    }
+    .testimonials-title{
+        padding: 1em;
+        text-align: center;
+    }
+    .testimonials-card{
+        width: 100%;
+        padding: 1em;
+        margin: 1rem 0.5rem;
+    }
+    .testimonials-content{
+        padding: 0.5em;
+        text-align: center;
+    }
+    .testimonial-name{
+        padding: 0.2em;
+        margin: 0.5rem 2rem;
+        text-align: center;
+        color: var(--primary-5);
+        font-size: 1rem;
+        font-weight: bold;
     }
 
 }

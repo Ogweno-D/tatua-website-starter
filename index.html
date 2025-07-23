@@ -20,25 +20,15 @@
                     class="company-logo"
                  >
             </div>
-            <nav >
-                <ul class="nav-links">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="case-studies.html">Case Studies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+            <nav class="navigation">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="case-studies.html">Case Studies</a>
+                <a class="nav-link" href="contact.html">Contact</a>
             </nav>
 
             <!--Mobile menu button -->
-            <div class="menu-btn">
+            <div id="navToggle" class="menu-btn">
                 <i class="fa fa-bars"> </i>
             </div>
         </div>
@@ -84,6 +74,7 @@
 
         <section class="stats">
             <div class="stats-card">
+
                 <span class="stat"> 500+ satisfied customers </span>
                 <span class="stat">  2M+ tickets processed</span>
                 <span class="stat"> 60% faster resolution</span>
@@ -96,7 +87,7 @@
         <div>
             <div>
                 <div class="footer-address">
-                    <p> Email: hello@tatua.com</p>
+                    <p> Email: <a href="mailto:hello@tatua.com"> hello@tatua.com</a> </p>
                     <p> Phone: +1 (555) 123-4567 </p>
                     <p> Address: 123 Innovation Drive, Suite 400, San Fransisco, CA 94105 </p>
                 </div>
@@ -109,5 +100,7 @@
             <a href="#main" class="back-to-top"><i class="fa fa-angle-up"></i></a>
         </div>
     </footer>
+
+<script src="main.js"></script>
 </body>
 </html>

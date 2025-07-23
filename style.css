@@ -43,60 +43,63 @@ html,body{
     display: flex;
     justify-content:space-evenly;
     margin: 1.5rem auto;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .company-logo{
 
 }
-.navbar{
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    top: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: white;
-    z-index: 1000;
-}
 
-.nav-links{
-    display: flex;
-    justify-content: center;
-    list-style: none;
+/* Prototype for the sticky navbar*/
+.navbar{
+    /*width: 100%;*/
+    /*height: 60px;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
+    /*background-color: white;*/
+    /*z-index: 1000;*/
 }
-.nav-item{
-    margin: 0 5px;
+.navigation{
+    display: flex;
+    gap: 1rem;
 }
 .nav-link{
-    display: inline-block;
-    width: 100%;
     padding: 0.5em;
-    margin: 10px;
-    text-decoration: none;
-    vertical-align: top;
+    margin: 1rem;
 }
 a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     text-decoration: none;
     text-align: center;
+    color: var(--primary-3);
+    transition: color 0.2s ease;
+}
+a:hover{
+    text-decoration: underline;
+    color: var(--primary-6);
 }
 .nav-link:hover{
-    background-color: #423275;
-    color: whitesmoke;
-    text-decoration: none;
+    color: var(--primary-8);
+    text-decoration: underline;
     cursor: pointer;
     border-radius: 5px;
 }
 
 .menu-btn{
     display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--primary-8);
 }
 
 .nav-breadcrumb{
     padding: 0.2em 1em;
     margin: 0 20px;
-    color: #555;
+    color: var(--primary-8);
     max-width: 1000px;
     width: 100%;
 }
@@ -107,12 +110,12 @@ a {
 }
 .breadcrumb-item{
     text-decoration: none;
-    color: #5a4dad;
+    color: var(--primary-3);
     padding: 0.5em;
-    transition: color 1s;
+    transition: color .2s;
 }
 .breadcrumb-item:hover{
-    color: #3c2f84;
+    color: var(--primary-7);
     text-decoration: underline;
 }
 .breadcrumb-separator{
@@ -150,12 +153,13 @@ span{
     font-size: 1.2rem;
     line-height: 1.5;
 }
-#main{
-    margin-top: 60px;
-}
 
+/* For fixed navigation on scroll*/
+#main{
+    /*margin-top: 60px;*/
+}
 .hero-section {
-    height: 75vh;
+    height: calc(100vh - 250px);
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -186,15 +190,14 @@ span{
     margin-bottom: 1.2rem;
     padding:0.5em 2.5em;
 }
-
 .hero-buttons{
     display: flex;
     justify-content: center;
     color: whitesmoke;
     gap: 1rem;
 }
-
 .btn{
+    position: relative;
     margin-top: 1.5rem;
     border-radius: 5px;
     outline: none;
@@ -210,9 +213,11 @@ span{
  /*  Add the lift effect from the notes*/
     background-color: #9d94d1;
     position: relative;
-    transition: top .2s ease;
+    top:-2px;
+    transition: top .3s ease;
+    text-decoration: none;
+    color: white;
 }
-
 .services-container {
     margin: 3rem auto;
     min-height: 50vh;
@@ -250,14 +255,12 @@ span{
 .service-card:hover{
     box-shadow: 10px 10px 10px #6f619f;
 }
-
 .service-card .label{
     display: block;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
-
 .service-card .value{
     padding:0.5rem 1rem;
     font-size: 1.5rem;
@@ -288,7 +291,6 @@ span{
     margin: 1rem auto;
     font-size: 1.5rem;
 }
-
 .footer{
     display: flex;
     justify-content: center;
@@ -299,7 +301,6 @@ span{
     background-color: rgba(230, 230, 236, 0.29);
     padding: 2em;
 }
-
 .footer-label{
     display: inline-block;
     color: rgba(57, 55, 55, 0.6);
@@ -309,12 +310,12 @@ span{
 .footer-address{
     padding: 1rem;
 }
-
 .footer-address p{
     margin: 0.2rem auto;
     padding: 0.2em;
 
 }
+
 /* Back to the top button */
 .back-to-top{
     position: fixed;
@@ -326,7 +327,6 @@ span{
 }
 
 /* Case Studies */
-
 .case-studies-container{
     padding: 1em;
     margin: 1rem auto;
@@ -356,7 +356,6 @@ span{
     box-shadow: 10px 10px 10px 10px #6f619f;
     transition: .3s ease;
 }
-
 .company-info{
     margin: 1rem auto;
     padding: 1em;
@@ -386,12 +385,10 @@ span{
     flex: 1 ;
     text-align: right;
 }
-
 .company-details{
     margin: 0.5em auto;
     padding: 1em
 }
-
 .company-challenge{
     padding: 1em;
 }
@@ -418,7 +415,8 @@ span{
 .testimonials{
     padding: 1em;
 }
-/* Reset and foundation */
+
+/* Tables */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -428,7 +426,6 @@ table {
     border-radius: 8px;
     overflow: hidden;
 }
-
 caption {
     padding: 0.5em;
     font-size: 1.75rem;
@@ -438,14 +435,12 @@ caption {
     background-color: var(--primary-1);
     border-bottom: 1px solid var(--primary-0);
 }
-
 th, td {
     padding: 0.75em 1em;
     text-align: left;
     border-bottom: 1px solid var(--primary-1);
     vertical-align: middle;
 }
-
 th {
     background-color: hsl(265,40%, 86%, 50%);
     font-weight: 600;
@@ -454,12 +449,10 @@ th {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 tbody tr:hover {
     background-color: var(--primary-0);
     transition: background-color 0.2s ease;
 }
-
 tbody tr:last-child td {
     border-bottom: none;
 }
@@ -757,10 +750,7 @@ tbody tr:last-child td {
 /*}*/
 
 /*!* FORM STYLING *!*/
-.contact-form {
-    min-width: 300px;
-}
-.contact-form-container{
+.contact-form-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1002,15 +992,50 @@ input:required:invalid:not(:placeholder-shown) {
 
 /*Media Queries for Responsiveness on small screens*/
 @media(max-width: 768px){
+    body{
+        font-size: 12px;
+    }
+    header{
+        flex-direction: row;
+        gap:5px;
+    }
+    .company-logo{
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .hero-title{
+        font-size: 3rem;
+    }
+    .hero-subtitle{
+        font-size: 2rem;
+        padding:0.5em;
+    }
     .hero-section{
         height: auto;
     }
-    .nav-links{
+    .nav-link{
+        margin: 0.5rem auto;
+        padding: 0;
+    }
+    .navigation{
         display: none;
+        flex-direction: column;
+        background: var(--primary-0);
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        padding: 1em;
+        border-radius:16px;
+        box-shadow: 0 8px 16px 0 var(--primary-4);
+    }
+    .navigation.open{
+        display: flex
     }
     .menu-btn{
-        display:inline-block;
+        display:flex;
     }
+
     .nav-breadcrumb{
         display: none;
     }
@@ -1092,14 +1117,134 @@ input:required:invalid:not(:placeholder-shown) {
 
 }
 
-/*@media(max-width: 480px){*/
-/*    .navbar{*/
-/*        display: none;*/
-/*    }*/
-/*    .services-container{*/
-/*        font-size: 1.25rem;*/
-/*    }*/
-/*    .service-card{*/
-/*        flex: 1 1 100%;*/
-/*    }*/
-/*}*/
+@media(max-width: 480px){
+    body{
+        font-size: 12px;
+    }
+    header{
+        flex-direction: row;
+        gap:5px;
+    }
+    .company-logo{
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .hero-title{
+        font-size: 3rem;
+    }
+    .hero-subtitle{
+        font-size: 2rem;
+        padding:0.5em;
+    }
+    .hero-section{
+        height: auto;
+    }
+    .nav-link{
+        margin: 0.5rem auto;
+        padding: 0;
+    }
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+        inset:0;
+        z-index: 1000;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+        pointer-events: none;
+        background: var(--primary-0);
+        position: absolute;
+        /*top: 40px;*/
+        /*right: 20px;*/
+        /*padding: 1em;*/
+        /*border-radius:16px;*/
+        /*box-shadow: 0 8px 16px 0 var(--primary-4);*/
+    }
+    .navigation.open{
+        display: flex;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-breadcrumb{
+        display: none;
+    }
+    .services-container{
+        padding: 1.5rem;
+
+    }
+    .services-cards{
+        text-align: center;
+    }
+    .service-card{
+        width: 100%;
+    }
+    .stats {
+        text-align: center;
+        padding: 0.5em;
+        display: inline-block;
+    }
+    .stats-card{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 200px;
+    }
+    .contact-details {
+        margin: 1em auto;
+        display: grid;
+    }
+    .team-members{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .team-member-card{
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-aside-section{
+        display: inline-block;
+    }
+
+    .form-container{
+        grid-template-columns:1fr;
+    }
+    /* Case Studies*/
+    .company-result{
+        padding: 1em;
+    }
+    .footer{
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        display:inline-block;
+    }
+    .testimonials-title{
+        padding: 1em;
+        text-align: center;
+    }
+    .testimonials-card{
+        width: 100%;
+        padding: 1em;
+        margin: 1rem 0.5rem;
+    }
+    .testimonials-content{
+        padding: 0.5em;
+        text-align: center;
+    }
+    .testimonial-name{
+        padding: 0.2em;
+        margin: 0.5rem 2rem;
+        text-align: center;
+        color: var(--primary-5);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}

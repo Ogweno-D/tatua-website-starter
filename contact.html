@@ -6,6 +6,9 @@
     <title> Contact Us - Tatua Solutions</title>
     <link rel="icon" type="image/png" href="assets/tatua-favicon.png" />
     <link rel="stylesheet" href="style.css">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <header>
@@ -17,25 +20,15 @@
                     class="company-logo"
             >
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="case-studies.html">Case Studies</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+        <nav class="navigation">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="case-studies.html">Case Studies</a>
+            <a class="nav-link" href="contact.html">Contact</a>
         </nav>
 
         <!--Mobile menu button -->
-        <div class="menu-btn">
+        <div id="navToggle" class="menu-btn">
             <i class="fa fa-bars"> </i>
         </div>
     </div>
@@ -113,8 +106,8 @@
         </div>
     </section>
         <!-- Contact Form-->
-    <section class="contact-form">
-        <div class="contact-form-container">
+    <section class="">
+        <div class="contact-form-section">
                 <h2>Contact Form</h2>
                 <form METHOD="post" action="#" class="form-container">
                     <div class="progress-bar">

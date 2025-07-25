@@ -35,14 +35,53 @@
     </header>
     <main id="main" >
         <section class="hero-section">
+
+            <div class="customizer-container">
+                <!-- Theme Section -->
+                <div class="customizer">
+                    <div class="theme-selector toggle-button" data-target="theme-customizer">
+                        <!-- Paint Palette SVG -->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"  viewBox="0 0 24 24">-->
+<!--                            <path d="M12 2C6.48 2 2 6.47 2 12c0 4.28 2.99 8 8.5 8..." />-->
+<!--                        </svg>-->
+                        🎨
+                    </div>
+                    <div class="theme-customizer slide-panel" id="theme-customizer">
+                        <div class="theme-selection">
+                            <label class="switch">
+                                <input type="checkbox" id="purpleTheme">
+                            </label>
+                            <label class="selector-label">Purple Theme</label>
+                        </div>
+                        <div class="theme-selection">
+                            <label class="switch">
+                                <input type="checkbox" id="brownTheme">
+                            </label>
+                            <label class="selector-label">Brown Theme</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Font Section -->
+                <div class="customizer">
+                    <div class="font-selector toggle-button" data-target="font-customizer">Aa</div>
+                    <div class="font-customizer slide-panel" id="font-customizer">
+                        <label for="fontSize">Base Font Size: <span id="fontSizeValue">16px</span></label>
+                       <label>
+                           <input id="fontSize" type="range" min="12" max="60" value="16">
+                       </label>
+                    </div>
+                </div>
+            </div>
+
+
             <div>
                 <h1 class="hero-title"> Streamline Your Support Operations</h1>
                 <h2 class="hero-subtitle"> Enterprise-grade ticketing system that scales with your business</h2>
                 <p class="hero-caption"> Join 500+ companies using Tatua to manage the customer support, track issues, and deliver exceptional service experience </p>
-
-                <div class="hero-buttons">
-                    <a  class="btn" href="#">Start Free Trial</a>
-                    <a  class="btn" href="#">Schedule Demo</a>
+                <div>
+                    <a  class="btn btn-primary" href="#">Start Free Trial</a>
+                    <a  class="btn btn-outline" href="#">Schedule Demo</a>
                 </div>
             </div>
         </section>

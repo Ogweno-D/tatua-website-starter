@@ -6,9 +6,8 @@
     <title> Contact Us - Tatua Solutions</title>
     <link rel="icon" type="image/png" href="assets/tatua-favicon.png" />
     <link rel="stylesheet" href="style.css">
-
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 <header>
@@ -92,7 +91,7 @@
                 <h3> Business Hours</h3>
                 <ul class="business-hours">
                     <li class="business-hours-item"> <strong> Monday - Friday:</strong> 8:00 AM - 6:00 PM PST</li>
-                    <li class="business-hours-item"> <strong> Saturday :</strong> 10:00 AM - 2:))PM PST</li>
+                    <li class="business-hours-item"> <strong> Saturday :</strong> 10:00 AM - 2:00PM PST</li>
                     <li class="business-hours-item"> <strong> Sunday : </strong> Closed</li>
                 </ul>
             </div>
@@ -140,12 +139,11 @@
                             <label for="phone-number">Phone Number</label>
                             <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
                         </div>
-                        <div class="form-buttons">
-                            <span></span>
-                            <button type="button" class="btn next-btn ">Next</button>
+                        <div>
+                            <button type="button" class="btn btn-primary">Next</button>
                         </div>
                     </fieldset>
-                    <fieldset class=" form-step customer-need">
+                    <fieldset class="">
                         <legend>Tell us about your need</legend>
                         <div class="form-group">
                             <label for="inquiry-type">Inquiry Type</label>
@@ -208,43 +206,61 @@
                             <label for="message">Message</label>
                             <textarea name="message" id="message" cols="30" rows="5" minlength="10" maxlength="500" required placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution.."></textarea>
                         </div>
-                        <div class="form-buttons">
-                            <button type="button" class="btn prev-btn">Previous</button>
-                            <button type="button" class="btn next-btn">Next</button>
+                        <div >
+                            <button type="button" class="btn btn-primary">Previous</button>
+                            <button type="button" class="btn btn-primary">Next</button>
                         </div>
                     </fieldset>
                     <!-- Communication Preferences-->
                     <fieldset class=" form-step communication-preference">
                         <legend>Communication Preferences</legend>
-                        <div class="form-group">
-                            <label> Preferred Contact Method (required)</label>
-                            <input type="radio" name="contact-method" id="contact-email" value="email" required > <label for="contact-email">Email</label>
-                            <input type="radio" name="contact-method" id="contact-phone-number" value="phone-number" required > <label for="contact-phone-number">Phone Number</label>
-                            <input type="radio" name="contact-method" id="video-call" value="video-call" required > <label for="video-call">Video Call</label>
+                        <div class="form-group radio-group">
+                            <label class="custom-form-label"> Preferred Contact Method (required)</label>
+                            <div class="radio-group-item">
+                                <input type="radio" name="contact-method" id="contact-email" value="email" required > <label for="contact-email">Email</label>
+                            </div>
+                            <div class="radio-group-item">
+                                <input type="radio" name="contact-method" id="contact-phone-number" value="phone-number" required > <label for="contact-phone-number">Phone Number</label>
+                            </div>
+                            <div class="radio-group-item">
+                                <input type="radio" name="contact-method" id="video-call" value="video-call" required > <label for="video-call">Video Call</label>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label> Best Time to Contact</label>
-                            <input type="radio" name="contact-time" id="morning" value="morning" required > <label for="morning">Morning (9 AM - 12 PM PST)</label>
-                            <input type="radio" name="contact-time" id="afternoon" value="afternoon" required > <label for="afternoon">Afternoon (12 PM - 5 PM PST)</label>
-                            <input type="radio" name="contact-time" id="evening" value="evening" required > <label for="evening">Evening (5 PM - 8 PM PST)</label>
+                        <div class="form-group radio-group">
+                            <label class="radio-label"> Best Time to Contact</label>
+                            <div class="radio-group-item">
+                                <input type="radio" name="contact-time" id="morning" value="morning" required >
+                                <label for="morning">Morning (9 AM - 12 PM PST)</label>
+                            </div>
+                            <div class="radio-group-item">
+                                <input type="radio" name="contact-time" id="afternoon" value="afternoon" required >
+                                <label for="afternoon">Afternoon (12 PM - 5 PM PST)</label>
+                            </div>
+                            <div class="radio-group-item">
+                                <input type="radio" name="contact-time" id="evening" value="evening" required >
+                                <label for="evening">Evening (5 PM - 8 PM PST)</label>
+                            </div>
                         </div>
 
                         <div class="form-group">
-<!--                            <label> Newsletter Subscription</label>-->
-                            <input class="custom-checkbox" type="checkbox" id="newsletter-subscription" value="newsletter-subscription" > <label for="newsletter-subscription">Yes, I'd like to receive product updates and industry insights</label>
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                <input  class="custom-checkbox" type="checkbox" id="terms-agreement" value="terms-agreement" required> <label for="terms-agreement"> I agree to the Terms of Service and Privacy Policy</label>
-                            </label>
+                            <label class="custom-form-label"> Newsletter Subscription</label>
+                            <div class="form-commitment">
+                                <input class="custom-checkbox" type="checkbox" id="newsletter-subscription" value="newsletter-subscription" >
+                                <label for="newsletter-subscription">Yes, I'd like to receive product updates and industry insights</label>
+                            </div>
+
+                            <div class="form-commitment">
+                                <input  class="custom-checkbox" type="checkbox" id="terms-agreement" value="terms-agreement" required>
+                                <label for="terms-agreement"> I agree to the Terms of Service and Privacy Policy</label>
+                            </div>
                         </div>
 
                     </fieldset>
-                    <div class="form-buttons" >
-                        <div class="form-buttons">
-                            <button type="button" class="btn prev-btn">Previous</button>
-                        <input class="btn" type="submit" value="Send Message">
-                        <input  class="btn" type="reset" value="Clear Form">
+                    <div  >
+                        <div >
+                            <button type="button" class="btn btn-primary">Previous</button>
+                            <input class="btn btn-primary" type="submit" value="Send Message">
+                            <input  class="btn btn-outline" type="reset" value="Clear Form">
                     </div>
                     </div>
                 </form>
@@ -337,7 +353,7 @@
     <div>
         <div>
             <div class="footer-address">
-                <p> Email: hello@tatua.com</p>
+                <p> Email: <a href="mailto:hello@tatua.com"> hello@tatua.com</a>  </p>
                 <p> Phone: +1 (555) 123-4567 </p>
                 <p> Address: 123 Innovation Drive, Suite 400, San Fransisco, CA 94105 </p>
             </div>
@@ -348,54 +364,6 @@
     </div>
 </footer>
 
-<script>
-    const form = document.getElementById("multi-step-form");
-    const steps = Array.from(document.querySelectorAll(".form-step"));
-    const progressSteps = Array.from(document.querySelectorAll(".progress-step"));
-    const nextBtns = document.querySelectorAll(".next-btn");
-    const prevBtns = document.querySelectorAll(".prev-btn");
-
-    let currentStep = 0;
-
-    function showStep(index) {
-        steps.forEach((step, i) => {
-            step.classList.toggle("active", i === index);
-            progressSteps[i].classList.toggle("active", i === index);
-        });
-    }
-
-    function validateStep(stepEl) {
-        const inputs = stepEl.querySelectorAll("input, select, textarea");
-        for (let input of inputs) {
-            if (!input.checkValidity()) {
-                input.reportValidity();
-                return false;
-            }
-        }
-        return true;
-    }
-
-    nextBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            if (validateStep(steps[currentStep])) {
-                currentStep++;
-                showStep(currentStep);
-            }
-        });
-    });
-
-    prevBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            currentStep--;
-            showStep(currentStep);
-        });
-    });
-
-    form.addEventListener("submit", (e) => {
-        if (!validateStep(steps[currentStep])) {
-            e.preventDefault();
-        }
-    });
-</script>
 </body>
+<script src="main.js"></script>
 </html>

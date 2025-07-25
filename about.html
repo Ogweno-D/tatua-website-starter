@@ -41,22 +41,41 @@
     </div>
 </header>
 <main>
-    <div class="customizer">
-        <div class="theme-customizer">
-            <label> Purple Theme</label>
-            <label class="switch">
-                <input type="checkbox" id="purpleTheme" >
-            </label>
-            <label> Brown Theme </label>
-            <label>
-                <input type="checkbox"  id="brownTheme">
-            </label>
+    <div class="customizer-container">
+        <!-- Theme Section -->
+        <div class="customizer">
+            <div class="theme-selector toggle-button" data-target="theme-customizer">
+                <!-- Paint Palette SVG -->
+                <!--                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"  viewBox="0 0 24 24">-->
+                <!--                            <path d="M12 2C6.48 2 2 6.47 2 12c0 4.28 2.99 8 8.5 8..." />-->
+                <!--                        </svg>-->
+                🎨
+            </div>
+            <div class="theme-customizer slide-panel" id="theme-customizer">
+                <div class="theme-selection">
+                    <label class="switch">
+                        <input type="checkbox" id="purpleTheme">
+                    </label>
+                    <label class="selector-label">Purple Theme</label>
+                </div>
+                <div class="theme-selection">
+                    <label class="switch">
+                        <input type="checkbox" id="brownTheme">
+                    </label>
+                    <label class="selector-label">Brown Theme</label>
+                </div>
+            </div>
         </div>
-        <div class="font-customizer">
-            <label for="fontSize"> Base Font size : <span id="fontSizeValue"> 16px </span></label>
-            <label>
-                <input  id="fontSize" type="range" min="12" max="60" value="16">
-            </label>
+
+        <!-- Font Section -->
+        <div class="customizer">
+            <div class="font-selector toggle-button" data-target="font-customizer">Aa</div>
+            <div class="font-customizer slide-panel" id="font-customizer">
+                <label for="fontSize">Base Font Size: <span id="fontSizeValue">16px</span></label>
+                <label>
+                    <input id="fontSize" type="range" min="12" max="60" value="16">
+                </label>
+            </div>
         </div>
     </div>
     <section class="about-us-container">

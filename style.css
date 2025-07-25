@@ -50,17 +50,18 @@
 }
 /* Brown Theme */
 .theme-brown {
-    --primary-1: #efebe9;
-    --primary-2: #d7ccc8;
-    --primary-3: #bcaaa4;
-    --primary-4: #a1887f;
-    --primary-5: #8d6e63;
-    --primary-6: #795548;
-    --primary-7: #6d4c41;
-    --primary-8: #5d4037;
-    --primary-9: #4e342e;
+    --primary-0: #efebe9;
+    --primary-1: #d7ccc8;
+    --primary-2: #bcaaa4;
+    --primary-3: #a1887f;
+    --primary-4: #8d6e63;
+    --primary-5: #795548;
+    --primary-6: #6d4c41;
+    --primary-7: #5d4037;
+    --primary-8: rgba(78, 52, 46, 0.89);
+    --primary-9: rgba(41, 28, 25, 0.5);
 
-    --primary-color: var(--primary-9);
+    --primary-color: var(--primary-6);
     --bg-color: #efebe9;
 }
 
@@ -295,7 +296,7 @@ button{
     text-align: center;
     margin-bottom: 2rem;
     font-size: 4rem;
-    color: var(--primary-9);
+    color: var(--primary-7);
 }
 .hero-subtitle{
     padding: 0.5em 2em;
@@ -403,11 +404,11 @@ button{
     border: 1px solid white;
     background-color:#fff;
     border-radius: 1rem;
-    box-shadow: 2px 5px 5px #6f619f;
+    box-shadow: 2px 5px 5px var(--primary-6);
     transition: box-shadow 0.5s ease;
 }
 .service-card:hover{
-    box-shadow: 10px 10px 10px #6f619f;
+    box-shadow: 10px 10px 10px var(--primary-5);
 }
 .service-card .label{
     display: block;
@@ -502,12 +503,12 @@ button{
     margin:2em auto;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 2px 5px 10px #6f619f;
+    box-shadow: 2px 5px 10px var(--primary-5);
     overflow: hidden;
     padding: 2em;
 }
 .case-study:hover{
-    box-shadow: 10px 10px 10px 10px #6f619f;
+    box-shadow: 10px 10px 10px 10px var(--primary-7);
     transition: .3s ease;
 }
 .company-info{
@@ -518,7 +519,7 @@ button{
     color: #313135;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 2px 5px 10px #6f619f;
+    box-shadow: 2px 5px 10px var(--primary-5);
     overflow: hidden;
 }
 .info-item{
@@ -586,7 +587,7 @@ caption {
     font-weight: 600;
     text-align: center;
     color: #333;
-    background-color: var(--primary-1);
+    background-color: var(--primary-2);
     border-bottom: 1px solid var(--primary-0);
 }
 th, td {
@@ -596,15 +597,15 @@ th, td {
     vertical-align: middle;
 }
 th {
-    background-color: hsl(265,40%, 86%, 50%);
+    /*background-color: var(--primary-2);*/
     font-weight: 600;
-    color: var(--primary-7);
+    color: var(--primary-8);
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 tbody tr:hover {
-    background-color: var(--primary-0);
+    background-color: var(--primary-1);
     transition: background-color 0.2s ease;
 }
 tbody tr:last-child td {

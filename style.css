@@ -85,6 +85,9 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
+.font-selector{
+    display: inline-block;
+}
 .slide-panel {
      position: fixed;
      top: 30%;

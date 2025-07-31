@@ -38,12 +38,25 @@ if(savedTheme){
     if(savedTheme === "brownTheme") brownCheckbox.checked = true;
 }
 
+//
+// fontSizeSlider.addEventListener('input', ()=>{
+//     const size = fontSizeSlider.value;
+//     document.documentElement.style.setProperty('--font-base', size + 'px');
+//     fontSizeValue.textContent = size + 'px';
+//     localStorage.setItem('fontSize', size);
+// });
 
-fontSizeSlider.addEventListener('input', ()=>{
+fontSizeSlider.addEventListener('input', () => {
     const size = fontSizeSlider.value;
+    console.log('Setting font size to:', size + 'px');
+
     document.documentElement.style.setProperty('--font-base', size + 'px');
     fontSizeValue.textContent = size + 'px';
     localStorage.setItem('fontSize', size);
+
+    // Check if the property was set
+    const computedValue = getComputedStyle(document.documentElement).getPropertyValue('--font-base');
+    console.log('CSS custom property value:', computedValue);
 });
 
 purpleCheckbox.addEventListener('change', ()=>{
